@@ -1,0 +1,172 @@
+:root {
+    --light-bg:  #fdfefe;
+    --light-bg-comp: #2ecc71 ;
+    --header-comp:  #16a085 ;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-bg);
+}
+
+header {
+    width: 100%;
+    background-color: var(--light-bg-comp);
+}
+
+nav {
+    display: flex;
+    position: static;
+    height: 100%;
+    justify-content: left;
+    height: 100px;
+}
+
+nav h1 {
+    text-align: center;
+    padding: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 170%;
+    color: var(--light-bg-comp);
+    background-color: var(--light-bg);
+    border-radius: 0px 50px 0px 0px;
+}
+
+.link-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a:link, nav a:visited {
+    color: var(--light-bg);
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.fill-box {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#foodies {
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px 0px;
+}
+
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 10px;
+    background: var(--header-comp);
+    color: var(--light-bg);
+    border-radius: 100px;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work-example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 100px;
+    transition: 0.5s;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.work-example:hover {
+    filter: grayscale(50%);
+    transform: scale(1.2);
+}
+
+.work-example p {
+    font-size: x-large;
+    font-family:'Courier New', Courier, monospace;
+    color:white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work-example:hover p {
+    padding: 0%;
+    opacity: 1;
+}
+
+#work1 {
+    background-image: url("https://media.npr.org/assets/img/2021/12/28/hsieh_angela_nprpchh_videogamesa_wide-7b51b98254a8a594e0ac928517b589efb3763578-s1100-c50.jpg");
+}
+
+#work2 {
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/11/apple-car_30.jpg?quality=90&strip=all");
+}
+
+#work3 {
+    background-image: url("https://s27389.pcdn.co/wp-content/uploads/AdobeStock_79969378-1024x440.jpeg.optimal.jpeg");
+}
+
+#work4 {
+    background-image: url("https://cdn.80.lv/api/upload/post/387/images/5d28789a40e80/widen_2440x0.jpg");
+}
+
+.contacts-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact:link, .contact:visited {
+    color: var(--header-comp);
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:double;
+    margin: 20px;
+}
