@@ -1,0 +1,168 @@
+/* || General Settings */
+:root {
+    --light-bg:  #fdfefe;
+    --light-bg-comp: #2ecc71 ;
+    --header-comp:    #2eccc0    ;
+}
+
+* {
+    align-items: center;
+    justify-content: space-around;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+header {
+    background-color: var(--light-bg-comp);
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+}
+
+li {
+    list-style: none;
+}
+
+/* || Navbar */
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: left;
+    padding: 10px 0px;
+}
+
+h1 {
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 0px 50px 50px 0px;
+}
+
+h1 span {
+    padding: 20px;
+    color: var(--light-bg-comp);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    user-select: none;
+}
+
+nav a:link, nav a:visited {
+    color: var(--light-bg);
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* || Main Body */
+
+/* Bubble headers */
+h2 {
+    display: flex;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--header-comp);
+    color: var(--light-bg);
+    border-radius: 100px;
+}
+
+/* || My Work */
+
+/* All of the bubble-buttons are <a>'s. */
+.bubble-button {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+/* A psuedoelement is used for the background so that it can be filtered without 
+   affecting the children (ie the text which shows up when you hover) */
+.bubble-button::before {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 100px;
+    transition: 0.5s;
+    background-size:cover;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+}
+
+/* Grow the <a>'s when hovered on. 
+   Also grows the children, ie the text and background image. */
+.bubble-button:hover {
+    transform: scale(1.2);
+}
+
+/* Dim the images when hovered on. */
+.bubble-button:hover::before {
+    filter: brightness(50%);
+}
+
+/* Set the images */
+#work1::before {
+    background-image: url("https://media.npr.org/assets/img/2021/12/28/hsieh_angela_nprpchh_videogamesa_wide-7b51b98254a8a594e0ac928517b589efb3763578-s1100-c50.jpg");
+}
+
+#work2::before {
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/11/apple-car_30.jpg?quality=90&strip=all");
+}
+
+#work3::before {
+    background-image: url("https://s27389.pcdn.co/wp-content/uploads/AdobeStock_79969378-1024x440.jpeg.optimal.jpeg");
+}
+
+#work4::before {
+    background-image: url("https://cdn.80.lv/api/upload/post/387/images/5d28789a40e80/widen_2440x0.jpg");
+}
+
+/* Set up text which will only appear on hover */
+.bubble-button span {
+    filter: brightness(100%);
+    text-align: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--light-bg);
+    opacity: 0;
+    text-decoration: none;
+    user-select: none;
+    transition: 0.5s;
+}
+
+.bubble-button:hover span {
+    opacity: 1;
+}
+
+/* || Contact Me */
+.contact:link, .contact:visited {
+    color: var(--light-bg-comp);
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 25px;
+}
