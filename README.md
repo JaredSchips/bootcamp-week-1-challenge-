@@ -6,7 +6,7 @@ This is a portfolio website which will be used to exhibit my completed projects.
 
 ## Usage
 
-You can access the website at [this link](https://jaredschips.github.io/bootcamp-week-2-challenge/)
+You can access the website at [this link](https://jaredschips.github.io/my-portfolio/)
 
 It should look something like this:
 
